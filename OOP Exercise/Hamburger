@@ -1,0 +1,112 @@
+package academy.learnprogramming;
+
+public class Hamburger {
+
+    // base ingredients
+    private String burgerName;
+    private String breadRollType;
+    private String meat;
+    private int price;
+
+    private final int basePrice = 20;
+
+    // additions to be selected
+    private boolean lettuceAdded;
+    private final int lettucePrice = 5;
+
+    private boolean tomatoAdded;
+    private final int tomatoPrice = 10;
+
+    private boolean carrotAdded;
+    private final int carrotPrice = 3;
+
+    private boolean appleAdded;
+    private final int applePrice = 4;
+
+    public Hamburger(String burgerName, String breadRollType, String meat) {
+        this.burgerName = burgerName;
+        this.breadRollType = breadRollType;
+        this.meat = meat;
+        this.price = basePrice;
+    }
+
+    public void addLettuce() {
+        lettuceAdded = true;
+        price += lettucePrice;
+    }
+
+    public void addTomato() {
+        tomatoAdded = true;
+        price += tomatoPrice;
+    }
+
+    public void addCarrot() {
+        carrotAdded = true;
+        price += carrotPrice;
+    }
+
+    public void addApple() {
+        appleAdded = true;
+        price += applePrice;
+    }
+
+    public void showPrice() {
+        System.out.println("Base price = " + basePrice);
+
+        if (lettuceAdded) {
+            System.out.println("lettucePrice = " + lettucePrice);
+        }
+        if (tomatoAdded) {
+            System.out.println("tomatoPrice = " + tomatoPrice);
+        }
+        if (carrotAdded) {
+            System.out.println("carrotPrice = " + carrotPrice);
+        }
+        if (appleAdded) {
+            System.out.println("applePrice = " + applePrice);
+        }
+
+
+        System.out.println("Total price = " + price);
+    }
+
+    public int getBasePrice() {
+        return basePrice;
+    }
+
+    public String getBurgerName() {
+        return burgerName;
+    }
+
+    public int getLettucePrice() {
+        return lettucePrice;
+    }
+
+    public int getTomatoPrice() {
+        return tomatoPrice;
+    }
+
+    public int getCarrotPrice() {
+        return carrotPrice;
+    }
+
+    public int getApplePrice() {
+        return applePrice;
+    }
+
+    public boolean isLettuceAdded() {
+        return lettuceAdded;
+    }
+
+    public boolean isTomatoAdded() {
+        return tomatoAdded;
+    }
+
+    public boolean isCarrotAdded() {
+        return carrotAdded;
+    }
+
+    public boolean isAppleAdded() {
+        return appleAdded;
+    }
+}
